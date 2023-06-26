@@ -1,0 +1,14 @@
+@keyframes feature-item-transition {
+  0% {
+    opacity: .5;
+  }
+
+  50% {
+    opacity: .8;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-1rem) translateY(-1rem);
+  }
+}

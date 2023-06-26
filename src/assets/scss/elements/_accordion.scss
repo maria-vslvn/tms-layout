@@ -1,0 +1,63 @@
+.accordion {
+  @include flexify($column: true);
+  gap: 2rem;
+  &-item,
+  &-item:not(:first-of-type) {
+    border: {
+      width: 1px;
+      style: solid;
+      color: $grey-light;
+      top-left-radius: 0;
+      top-right-radius: 0;
+      bottom-right-radius: 0;
+      bottom-left-radius: 0;
+    }
+  }
+
+  &-button,
+  &-button:not(.collapsed) {
+    background-color: transparent;
+    color: inherit;
+    text-transform: inherit;
+    border: {
+      top-left-radius: 0;
+      top-right-radius: 0;
+      bottom-right-radius: 0;
+      bottom-left-radius: 0;
+    }
+    font: {
+      size: inherit;
+      weight: inherit;
+    }
+    gap: 3rem;
+    padding: 1rem 1.5rem;
+    @include flexify($align: center, $justify: space-between);
+
+    &:after {
+      width: 3.5rem;
+      height: 3.5rem;
+      @extend .icon-arrow-down;
+    }
+  }
+
+  &-body {
+    font: {
+      weight: $fw-r;
+      size: 1.3rem;
+    }
+    line-height: 1.5rem;
+    height: 100%;
+    max-height: 13.8rem;
+    overflow: auto;
+    padding: 1.5rem;
+
+    @include sm {
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+    }
+  }
+
+  &-collapse {
+
+  }
+}

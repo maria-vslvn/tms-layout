@@ -1,0 +1,35 @@
+@import '../../../../node_modules/bootstrap/scss/bootstrap';
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "icons";
+@import "bg-images";
+@import "animations";
+@import "helpers";
+@import "elements/index";
+@import "sections/index";
+
+
+html {
+  font: {
+    size: $fs-base;
+    family: Raleway, sans-serif;
+    weight: $fw-r;
+  }
+}
+
+* {
+  color: $black;
+  font: {
+    family: Raleway, sans-serif;
+    weight: $fw-r;
+  }
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+img {
+  max-width: 100%;
+}

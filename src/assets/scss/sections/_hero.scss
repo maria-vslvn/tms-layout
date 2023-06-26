@@ -1,0 +1,118 @@
+.hero {
+  &-section {
+    height: 100vh;
+    padding-top: $header-height;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    @extend .eagle-bg;
+
+    .carousel-indicators {
+      width: 100%;
+      @include flexify($align: center, $justify: center);
+      gap: 1rem;
+
+      button {
+        flex-grow: 1;
+        width: auto;
+        height: auto;
+        gap: 1rem;
+        font-size: 1.8rem;
+        background-color: transparent;
+        border-top: 3px solid $white;
+        @include flexify($align: center);
+
+        h4 {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    h4, span {
+      color: $white;
+      text-indent: 0;
+      display: none;
+
+      @include sm {
+        display: block;
+      }
+    }
+
+    @include sm {
+      gap: 2rem;
+    }
+
+    @include lg {
+      gap: 4rem;
+    }
+  }
+
+  &-subtitle {
+    @extend .ff-italic;
+    color: $white;
+    font-size: 3.6rem;
+
+    @include sm {
+      font-size: 4.8rem;
+    }
+
+    @include md {
+      font-size: 6.4rem;
+    }
+  }
+
+  &-title {
+    color: $white;
+    font: {
+      weight: $fw-b;
+      size: 4.8rem;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      margin: 4rem auto;
+      height: 2px;
+      width: 11.5rem;
+      background-color: $white;
+    }
+
+    @include sm {
+      font-size: 9.6rem;
+    }
+
+    @include md {
+      font-size: 14.4rem;
+    }
+  }
+
+  &-btn {
+    background-color: transparent;
+    border: 2px solid $white;
+    font: {
+      weight: $fw-b;
+      size: 1.8rem;
+    }
+    width: 100%;
+    max-width: 31.8rem;
+    min-height: 5.4rem;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $white;
+      color: $yellow-accent;
+    }
+
+    &:active,
+    &:focus {
+      background-color: $white;
+      color: $yellow-accent;
+      border-color: $yellow-accent;
+    }
+  }
+}

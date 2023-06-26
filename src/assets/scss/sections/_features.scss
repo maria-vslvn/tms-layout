@@ -1,0 +1,91 @@
+.feature-item {
+  @extend .item-overlay-helper;
+  margin-bottom: 6rem;
+
+  [class*='overlay'] {
+    opacity: 1;
+    top: auto;
+    height: 9rem;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 9rem;
+    left: 0;
+    opacity: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $turquoise;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  @include sm {
+    margin-bottom: 2rem;
+
+    &:before {
+      top: 0;
+      height: 100%;
+    }
+
+    [class*='overlay'] {
+      opacity: 0;
+      top: 0;
+      height: 100%;
+    }
+  }
+}
+
+.turquoise-bg {
+  .item {
+    border-bottom: 1px solid $white;
+    flex: 1 0 50%;
+    max-width: 50%;
+    gap: 3rem;
+    padding: 4.5rem 0;
+    @include flexify($align: center, $column: true);
+
+    &:last-child {
+      flex-grow: 1;
+      max-width: 100%;
+      border-bottom: none;
+    }
+
+    p {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+      color: $white;
+
+      &.item-title {
+        line-height: 5.6rem;
+        font: {
+          weight: $fw-b;
+          size: 4.8rem;
+        }
+      }
+    }
+
+    @include sm {
+      flex-grow: 1;
+      max-width: none;
+      flex-basis: auto;
+      border-bottom: none;
+      border-right: 1px solid $white;
+
+     &:first-child {
+       border-left: 1px solid $white;
+     }
+
+      .item-title {
+        font-size: 6.4rem;
+        line-height: 7.5rem;
+      }
+    }
+  }
+}

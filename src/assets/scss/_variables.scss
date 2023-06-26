@@ -1,0 +1,31 @@
+$white: #fff;
+$grey-light-2: #F8F8F8;
+$grey-light: #C6CBCD;
+$grey: #A9AFB1;
+$orange: #E98283E5;
+$orange-accent: #F38281;
+$yellow-accent: #F4BF87;
+$yellow-light: #F9EFCF;
+$yellow: #EDD789E5;
+$turquoise: #95E1D3;
+
+$main-gradient: linear-gradient(to top, $yellow, $orange 80%);
+
+$bp-sm: 768px;
+$bp-md: 991px;
+$bp-lg: 1024px;
+
+$colors: (
+        'white': $white,
+        'grey': $grey,
+        'grey-light': $grey-light,
+        'grey-light-2': $grey-light-2,
+        'black': $black,
+        'turquoise': $turquoise,
+        'orange': $orange,
+        'orange-accent': $orange-accent,
+        'yellow-accent': $yellow-accent,
+        'yellow': $yellow,
+);
+
+$header-height: 6.8rem;

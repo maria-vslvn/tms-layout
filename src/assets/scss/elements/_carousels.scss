@@ -1,0 +1,56 @@
+.carousel-indicators {
+  position: static;
+  margin: 0;
+}
+
+.carousel-rel-controls {
+  @include flexify($justify: center, $column: true);
+  gap: 3rem;
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    position: relative;
+    width: 4.2rem;
+    height: 4.2rem;
+
+    &-icon {
+      @extend .icon-arrow-down;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .carousel-control-next-icon {
+    transform: rotate(-90deg);
+  }
+
+  .carousel-control-prev-icon {
+    transform: rotate(90deg);
+  }
+
+  &-inner {
+    flex-grow: 1;
+  }
+
+  .carousel-indicators {
+    @include flexify($align: center);
+    gap: 3rem;
+    button {
+      background-color: transparent;
+      width: 1rem;
+      margin: 0;
+      height: 1rem;
+      border: {
+        top: 1px solid $grey-light;
+        bottom: 1px solid $grey-light;
+        left: 1px solid $grey-light;
+        right: 1px solid $grey-light;
+        radius: 50%;
+      }
+
+      &.active {
+        background-color: $grey-light;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+  padding-top: 1.7rem;
+  z-index: 3;
+  background-color: transparentize($orange-accent, .8);
+
+  .icon-logo {
+    width: 10rem;
+    height: 2.6rem;
+  }
+
+  .nav-item {
+    width: 11.4rem;
+    @include flexify($align: center, $justify: center);
+
+    .nav-link {
+      color: $white;
+      text-transform: uppercase;
+      font: {
+        weight: $fw-sb;
+        size: 1.4rem;
+      }
+      padding-bottom: 1rem;
+      border-radius: 0;
+      border-bottom: 1px solid transparent;
+
+      &.active {
+        border-bottom-color: $yellow-accent;
+        background-color: transparent;
+        color: $yellow-accent;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    width: 5.5rem;
+    height: 5.5rem;
+    padding: 1.2rem 0;
+    border: 0;
+
+    @include flexify($align: center, $justify: center);
+  }
+}

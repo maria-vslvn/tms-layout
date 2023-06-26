@@ -1,0 +1,7 @@
+.logo {
+  @include bg('../icons/logo.svg');
+  @include flexify();
+  height: 100%;
+  width: 100%;
+  max-width: 10rem;
+}

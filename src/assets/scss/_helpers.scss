@@ -1,0 +1,171 @@
+@for $i from 0 to 11 {
+  .gap-#{$i} {
+    gap: calc(#{$i} * 5px) !important;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: calc(#{$i} * 5px) !important;
+  }
+
+  .mt-#{$i} {
+    margin-top: calc(#{$i} * 5px) !important;
+  }
+
+  .pt-#{$i} {
+    padding-top: calc(#{$i} * 5px) !important;
+  }
+
+  .pb-#{$i} {
+    padding-bottom: calc(#{$i} * 5px) !important;
+  }
+}
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@each $color, $val in $colors {
+  .#{$color}-bg {
+    background-color: $val;
+  }
+
+  .border {
+    &-#{$color} {
+      border: 1px solid $val;
+    }
+
+    &-top {
+      &-#{$color} {
+        border-top: 1px solid $val;
+      }
+    }
+
+    &-bottom {
+      &-#{$color} {
+        border-bottom: 1px solid $val;
+      }
+    }
+  }
+}
+
+@for $i from 0 to 200 {
+  .wh-#{$i} {
+    width: calc(#{$i}rem / 10);
+    height: calc(#{$i}rem / 10);
+    flex: 0 0 calc(#{$i}rem / 10);
+  }
+}
+
+.item-overlay-helper {
+  padding-top: 100%;
+  position: relative;
+  cursor: pointer;
+  transition: .2s;
+
+  [class*='-overlay'] {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    gap: 2rem;
+    color: $white;
+    @include bg($gradient: $main-gradient);
+    @include flexify($align: center, $justify: center, $column: true);
+
+    p {
+      color: $white;
+    }
+  }
+
+  &:hover {
+    [class*='overlay'] {
+      animation: {
+        name: feature-item-transition;
+        duration: .4s;
+        fill-mode: forwards;
+      }
+    }
+  }
+}
+
+.item-overlay-hover-helper {
+  padding-top: 100%;
+  position: relative;
+  cursor: pointer;
+  transition: .2s;
+
+  [class*='-overlay'] {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    gap: 2rem;
+    color: $white;
+    transition: .2s;
+    @include bg($gradient: $main-gradient);
+    @include flexify($align: center, $justify: center, $column: true);
+
+    p {
+      color: $white;
+    }
+  }
+
+  &:hover {
+    [class*='overlay'] {
+      opacity: 1;
+    }
+  }
+}
+
+.container,
+[class*='col-'] {
+  padding: {
+    left: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+.row {
+  margin: {
+    left: -1.5rem;
+    right: -1.5rem;
+  }
+}
+
+
+.btn-group {
+  @include flexify($align: center);
+  gap: 1px;
+}
+
+.hidden {
+  display: none !important;
+
+  &-md {
+    @media (min-width: $bp-sm) and (max-width: calc(#{$bp-md} - 1px)) {
+      display: none !important;
+    }
+  }
+
+  &-lg {
+    @media (min-width: $bp-md) and (max-width: calc(#{$bp-lg} - 1px)) {
+      display: none !important;
+    }
+  }
+
+  &-desktop {
+    @media (min-width: $bp-lg) {
+      display: none !important;
+    }
+  }
+
+  &-mobile {
+    @media (max-width: calc(#{$bp-lg} - 1px)) {
+      display: none !important;
+    }
+  }
+}

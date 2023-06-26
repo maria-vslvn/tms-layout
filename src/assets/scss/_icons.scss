@@ -1,0 +1,220 @@
+.icon {
+  width: 4rem;
+  height: 4rem;
+  flex: 0 0 4rem;
+
+  @include flexify($align: center, $justify: center);
+
+  &-add-user {
+    @include bg('../icons/add-user-icon.svg');
+  }
+
+  &-mushroom {
+    @include bg('../icons/mushroom-icon.svg');
+  }
+
+  &-grid {
+    @include bg('../icons/grid-icon.svg');
+  }
+
+  &-blade {
+    @include bg('../icons/blade-icon.svg');
+  }
+
+  &-map {
+    @include bg('../icons/map-icon.svg');
+  }
+
+  &-pic {
+    @include bg('../icons/pic-icon.svg');
+  }
+
+  &-target {
+    @include bg('../icons/target-icon.svg');
+  }
+
+  &-face {
+    @include bg('../icons/face-icon.svg');
+  }
+
+  &-circles {
+    @include bg('../icons/circles-icon.svg');
+  }
+
+  &-settings {
+    @include bg('../icons/settings-icon.svg');
+  }
+
+  &-arrow-down {
+    @include bg('../icons/arrow-down-icon.svg');
+  }
+
+  &-comment {
+    @include bg('../icons/comment-icon.svg');
+  }
+
+  &-fb {
+    @include bg('../icons/fb-icon.svg');
+  }
+
+  &-twitter {
+    @include bg('../icons/twitter-icon.svg');
+  }
+
+  &-insta {
+    @include bg('../icons/insta-icon.svg');
+  }
+
+  &-linkedin {
+    @include bg('../icons/linkedin-icon.svg');
+  }
+
+  &-topcoat {
+    @include bg('../icons/topcoat-icon.svg');
+  }
+
+  &-youtube {
+    @include bg('../icons/youtube-icon.svg');
+  }
+
+  &-tiktok {
+    @include bg('../icons/tik-tok-icon.svg');
+  }
+
+  &-pinterest {
+    @include bg('../icons/pinterest-icon.svg');
+  }
+
+  &-rect-1 {
+    @include bg('../icons/rect-icon-1.svg');
+  }
+
+  &-rect-2 {
+    @include bg('../icons/rect-icon-2.svg');
+  }
+
+  &-rect-3 {
+    @include bg('../icons/rect-icon-3.svg');
+  }
+
+  &-rect-4 {
+    @include bg('../icons/rect-icon-4.svg');
+  }
+
+  &-rect-5 {
+    @include bg('../icons/rect-icon-5.svg');
+  }
+
+  &-rect-6 {
+    @include bg('../icons/rect-icon-6.svg');
+  }
+
+  &-reward {
+    @include bg('../icons/reward-icon.svg');
+  }
+
+  &-sixtangle {
+    @include bg('../icons/sixtangle-icon.svg');
+  }
+
+  &-location {
+    @include bg('../icons/location-icon.svg');
+  }
+
+  &-cart {
+    @include bg('../icons/cart-icon.svg');
+  }
+
+  &-search {
+    @include bg('../icons/search-icon.svg');
+  }
+
+  &-bar {
+    @include bg('../icons/bar-icon.svg');
+  }
+
+  &-logo {
+    @include bg('../icons/logo.svg');
+  }
+
+  &-footer-logo {
+    @include bg('../icons/footer-logo.svg');
+  }
+
+  &-sm {
+    width: 2rem;
+    height: 2rem;
+    flex: 0 0 2rem;
+  }
+
+  &-btn {
+    background-color: $yellow-light;
+    width: 4.2rem;
+    height: 4.2rem;
+    background-size: 4rem !important;
+    @include flexify($align: center, $justify: center);
+
+    &.icon-fb {
+      @include bg('../icons/btn-fb-icon.svg');
+
+      &:hover {
+        @include bg('../icons/btn-fb-icon-active.svg');
+      }
+    }
+    &.icon-twitter {
+      @include bg('../icons/btn-twitter-icon.svg');
+
+      &:hover {
+        @include bg('../icons/btn-twitter-icon-active.svg');
+      }
+    }
+    &.icon-insta {
+      @include bg('../icons/btn-insta-icon.svg');
+
+      &:hover {
+        @include bg('../icons/btn-insta-icon-active.svg');
+      }
+    }
+    &.icon-pinterest {
+      @include bg('../icons/btn-pinterest-icon.svg');
+
+      &:hover {
+        @include bg('../icons/btn-pinterest-icon-active.svg');
+      }
+    }
+
+    &:hover {
+      background-color: $orange-accent;
+    }
+  }
+}
+
+.icons-wrap {
+  @include flexify($align: center, $wrap: wrap, $justify: space-between);
+
+  .icon-wrap {
+    padding: {
+      top: 4rem;
+      bottom: 4rem;
+    }
+    flex: 1 1 50%;
+    max-width: 50%;
+    @include flexify($justify: center);
+
+    &:nth-child(3),
+    &:last-child {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
+    @include sm {
+      &,
+      &:nth-child(3),
+      &:last-child {
+        flex-basis: 7rem;
+        flex-grow: 1;
+        max-width: 12.7rem;
+      }
+    }
+  }
+}

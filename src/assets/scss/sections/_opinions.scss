@@ -1,0 +1,7 @@
+.opinions-section {
+  &-item {
+    margin-bottom: 5rem;
+    gap: 3rem;
+    @include flexify($align: flex-start);
+  }
+}

@@ -1,0 +1,12 @@
+.service-section {
+  &-pic {
+
+  }
+
+  &-item {
+    margin-bottom: 6rem;
+    gap: 3rem;
+    width: 100%;
+    @include flexify($align: flex-start);
+  }
+}

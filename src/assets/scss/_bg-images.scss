@@ -1,0 +1,145 @@
+.eagle-bg {
+  @include bg(
+          $url: '../images/eagle.png',
+          $gradient: $main-gradient,
+  );
+}
+
+.mountains-bg {
+  @include bg(
+          $url: '../images/mountains.png',
+          $gradient: linear-gradient(transparentize($white, .5), transparentize($white, .5)),
+  );
+}
+
+.what-we-do-bg {
+  @include bg('../images/what-we-do.png');
+}
+
+.feature-1-bg {
+  @include bg('../images/feature-1.png');
+}
+
+.feature-2-bg {
+  @include bg('../images/feature-2.png');
+}
+
+.kadin-dias-bg {
+  @include bg('../images/kadin_dias.png');
+}
+
+.zain-calzoni-bg {
+  @include bg('../images/zain_calzoni.png');
+}
+
+.charlie-george-bg {
+  @include bg('../images/charlie_george.png');
+}
+
+.girl-bg {
+  @include bg('../images/girl.png');
+}
+
+.petra-bg {
+  @include bg('../images/petra.png');
+}
+
+.wood-urban-bg {
+  @include bg('../images/wood-urban.png');
+}
+
+.windows-bg {
+  @include bg('../images/windows.png');
+}
+
+.glass-city-bg {
+  @include bg('../images/glass-city.png');
+}
+
+.bw-urban-bg {
+  @include bg('../images/bw-urban.png');
+}
+
+.wavy-urban-bg {
+  @include bg('../images/wavy-urban.png');
+}
+
+.james-philips-bg {
+  @include bg('../images/james_philips.png');
+}
+
+.river-bg {
+  @include bg(
+          $url: '../images/river.png',
+          $gradient: linear-gradient(transparentize($white, .2), transparentize($white, .2)));
+}
+
+.phillip-culhane-bg {
+  @include bg('../images/phillip_culhane.png')
+}
+
+.paityn-press-bg {
+  @include bg('../images/paityn_press.png')
+}
+
+.dulce-gouse-bg {
+  @include bg('../images/dulce_gouse.png')
+}
+
+.zaire-schleifer-bg {
+  @include bg('../images/zaire_schleifer.png')
+}
+
+.fields-bg {
+  @include bg(
+          $url: '../images/fields.png',
+          $gradient: linear-gradient(transparentize($white, .2), transparentize($white, .2)));
+}
+
+.blog-1-bg {
+  @include bg('../images/blog-1.png');
+}
+
+.blog-2-bg {
+  @include bg('../images/blog-2.png');
+}
+
+.blog-3-bg {
+  @include bg('../images/blog-3.png');
+}
+
+.grid-1-bg {
+  @include bg('../images/grid-1.png');
+}
+
+.grid-2-bg {
+  @include bg('../images/grid-2.png');
+}
+
+.grid-3-bg {
+  @include bg('../images/grid-3.png');
+}
+
+.grid-4-bg {
+  @include bg('../images/grid-4.png');
+}
+
+.grid-5-bg {
+  @include bg('../images/grid-5.png');
+}
+
+.grid-6-bg {
+  @include bg('../images/grid-6.png');
+}
+
+.grid-7-bg {
+  @include bg('../images/grid-7.png');
+}
+
+.grid-8-bg {
+  @include bg('../images/grid-8.png');
+}
+
+.grid-9-bg {
+  @include bg('../images/grid-9.png');
+}

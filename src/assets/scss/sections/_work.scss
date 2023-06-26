@@ -1,0 +1,15 @@
+.work-section {
+  &-item {
+
+  }
+
+  &-pic {
+    padding-top: 56.25%;
+    margin-bottom: 3rem;
+    
+    @include sm {
+      padding-top: 100%;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "header";
+@import "hero";
+@import "features";
+@import "service";
+@import "work";
+@import "opinions";
+@import "team";
+@import "grid";
+@import "blog";
+@import "footer";
+
+section:not(#shadow-host-companion) {
+  padding: {
+    top: 5rem;
+    bottom: 5rem;
+  }
+
+  @include sm {
+    padding: {
+      top: 8rem;
+      bottom: 8rem;
+    }
+  }
+}
+
+.overlap-pic {
+  margin-bottom: -7rem;
+
+  @include sm {
+    margin-bottom: -11rem;
+  }
+
+  @include md {
+    margin-bottom: -13rem;
+  }
+}
